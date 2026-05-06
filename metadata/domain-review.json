@@ -1,0 +1,73 @@
+{
+  "repo": "nexus-dev-graph-map",
+  "language": "Rust",
+  "category": "Developer tools",
+  "goal": "Build a Rust toolkit that studies graph behavior through round-trip fixtures, with lossless normalization checks and no network dependency.",
+  "review_model": {
+    "terms": [
+      "change width",
+      "diagnostic quality",
+      "review cost",
+      "safe rewrite"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "change width",
+      "signal": 52,
+      "slack": 36,
+      "drag": 18,
+      "confidence": 79,
+      "score": 165,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "diagnostic quality",
+      "signal": 80,
+      "slack": 47,
+      "drag": 27,
+      "confidence": 91,
+      "score": 217,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "review cost",
+      "signal": 71,
+      "slack": 54,
+      "drag": 32,
+      "confidence": 94,
+      "score": 194,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "safe rewrite",
+      "signal": 57,
+      "slack": 30,
+      "drag": 18,
+      "confidence": 82,
+      "score": 172,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "change width",
+      "signal": 53,
+      "slack": 31,
+      "drag": 13,
+      "confidence": 66,
+      "score": 164,
+      "lane": "ship"
+    }
+  ]
+}
